@@ -1,88 +1,154 @@
-body{
-    margin:0;
-    padding: 0;
-    background-color: #60abf0;
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #60abf0;
 }
-header{
-    width:100%;
-    height:6rem;
-    display: flex;
-    background-color:white;
-    justify-content: space-between;
-    padding: .5rem 2.5rem;
-    box-sizing: border-box;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
-    
+header {
+  width: 100%;
+  height: 6rem;
+  display: flex;
+  background-color: white;
+  justify-content: space-between;
+  padding: 0.5rem 2.5rem;
+  box-sizing: border-box;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
 }
-header div:nth-child(2){
-    text-align:center;
-    flex:2;
+header div:nth-child(2) {
+  text-align: center;
+  flex: 2;
 }
-header div{
-    flex:1;
+header div {
+  flex: 1;
 }
-header div img{
-    height:5rem;
+header div img {
+  height: 5rem;
 }
 
-.header_right{
-    display: flex;
-    text-align: center;
+.header_right {
+  display: flex;
+  text-align: center;
 }
-.header_right a{
-    flex:1;
+.header_right a {
+  flex: 1;
 }
-.header_right a:last-child img{
-    border-radius: 100rem;
+.header_right a:last-child img {
+  border-radius: 100%;
 }
-.application_status{
-    max-width: 92%;
-    text-align: center;
-    margin:1rem auto;
-    display:flex;
-    
+.application_status {
+  max-width: 92%;
+  text-align: center;
+  margin: 1rem auto;
+  display: flex;
 }
-.application_status div{
-    display:flex;
-    flex-wrap: wrap;
-    width:25%;
-    box-shadow: 1px 2px 8px  rgba(0, 0, 0, 0.26);
-    background-color: white;
-    border-radius:1rem;
-    margin:0 1rem;
-    padding :1rem;
-    justify-content:space-around;
+.application_status div {
+  display: flex;
+  flex-wrap: wrap;
+  width: 25%;
+  box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.26);
+  background-color: white;
+  border-radius: .5rem;
+  margin: 0 1rem;
+  padding: 1rem;
+  justify-content: space-around;
 }
-.application_status div img{
-    height:4rem;
-    
+.application_status div img {
+  height: 4rem;
 }
-.application_status div h1{
-    font-size: 4rem;
-    margin:0;
-    max-width: 70%;
+.application_status div h1 {
+  font-size: 4rem;
+  margin: 0;
+  max-width: 70%;
 }
-.application_status div p{
-    margin:0rem .5rem;
-    margin-left: auto;
-    
+.application_status div p {
+  margin: 0rem 0.5rem;
+  margin-left: auto;
 }
-.application_status div hr{
-    width:100%;   
-    border-top: 1px solid rgb(167, 166, 166);
-    margin:0rem 0rem;
-    margin-top: auto;
+.application_status div hr {
+  width: 100%;
+  border-top: 1px solid rgb(167, 166, 166);
+  margin: 0rem 0rem;
+  margin-top: auto;
 }
-.applicant_list_section{
-    box-shadow: 1px 2px 8px  rgba(0, 0, 0, 0.26);
-    background-color: white;
-    border-radius:1rem;
-    margin:1rem 1.5rem;
-    padding :1rem;
-    height:40rem;
+.applicant_list_section {
+  box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.26);
+  background-color: white;
+  border-radius: 1rem;
+  margin: 1rem 1.5rem;
+  height: 40rem;
 }
 
 .break {
   flex-basis: 100%;
   height: 0;
+}
+.dynamic_controls {
+  display: flex;
+  padding-top: 1rem;
+  margin: 0 1rem;
+}
+.dynamic_controls div {
+  height: 3rem;
+}
+.dynamic_controls div:first-child {
+  flex-grow: 1;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 1rem;
+}
+
+.dynamic_controls div:last-child {
+  display: inline-flex;
+  margin-right: 1rem;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.26);
+}
+#add_user_btn {
+  border-radius: 100%;
+  height: 3rem;
+  width: 3rem;
+  color: rgb(96, 171, 240);
+  border: white;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.26);
+}
+#filter_user_btn {
+  border-radius: 10%;
+  height: 3rem;
+  border: white;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.26);
+  margin-left: auto;
+}
+#add_user_btn img {
+  height: 1rem;
+}
+#filter_user_btn img,
+#search_user_btn img {
+  height: 2rem;
+  margin: 0.5rem;
+}
+#search_user_btn {
+  background-color: rgb(96, 171, 240);
+  height: 3rem;
+  border: white;
+}
+#search_user_input {
+  height: 3rem;
+  /* width:12.5rem; */
+  display: inline-block;
+  border-radius: 0;
+  background-color: rgb(237, 234, 234);
+  border-color: rgb(237, 234, 234);
+}
+#add_user_btn:focus,
+#filter_user_btn:focus,
+#search_user_btn:focus {
+  border: white;
+  
+  outline: rgb(1, 132, 255);
+  outline-style: solid;
+  z-index: 1;
+}
+
+
+#search_user_input:focus {
+  border-color: rgb(237, 234, 234);
+  box-shadow: initial;
 }
