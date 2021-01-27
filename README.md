@@ -1,8 +1,8 @@
 # Apllication-status-redering-Webpage
 <header>Content</header>
-<a href="">About this project</a>
-<a href="#Applied-Media-queries">Media queries</a>,
-<a href="#Getting-the-table-data-from-JSON">User data</a>,
+<a href="#about-this-project">About this project</a>
+<a href="#applied-media-queries">Media queries</a>,
+<a href="#getting-the-table-data-from-json">User data</a>,
 
 <div>
 	<h1>About this Project</h1>
