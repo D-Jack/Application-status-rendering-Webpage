@@ -6,7 +6,7 @@
 
 <div>
 	<h1>About this Project</h1>
-	<p>In this project I have designed the UI interface with scratch with HTML, CSS and little bit bootstrap with media queries included .I have made a user data adding functionality through js</p>
+	<p>In this project I have designed the UI interface with scratch with HTML, CSS and little bit bootstrap with media queries included .I have made a user data adding functionality through js(on progress)</p>
 	<h1>Applied Media queries</h1>
 	<p>I have applied dynamic media queries with respected to user display size </p>
 	<div style="display: flex;">
