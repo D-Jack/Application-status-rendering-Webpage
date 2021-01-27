@@ -331,8 +331,6 @@ header div img {
   .dynamic_controls div:last-child {
     margin: 0.5rem 1rem;
   }
-}
-@media screen and (max-width:440px){
   header{
     height:auto;
     flex-wrap:wrap;
@@ -348,5 +346,7 @@ header div img {
   }
   .header_right{
     flex-basis:100%;
+    padding-top: .4rem;
   }
 }
+
