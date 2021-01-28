@@ -15,7 +15,7 @@
 		<img src="src/media/img media 970px.png" alt="media queries 970px">
 	</div>
 	<h1>Getting the table data from JSON</h1>
-	<p>I have got the user object from jason and updated the value on UI with respected different style classes</p>
+	<p>I have got the user object from JSON and updated the value on UI with respected different style classes</p>
 	<img src="src/media/img readme 4.png" alt="adding class through js">
 
 </div>
