@@ -11,7 +11,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="src/css/style.css" />
-    
+
     <script src="https://code.jquery.com/jquery-3.5.1.min.js" defer></script>
     <script src="src/js/vendor.js" defer></script>
     <script src="src/js/app.js" defer></script>
@@ -41,7 +41,9 @@
           <h1>1000</h1>
           <p class="break"></p>
           <p>
-            <span style="color: rgb(95,84,225);"><strong>APPLIED</strong></span>
+            <span style="color: rgb(95, 84, 225)"
+              ><strong>APPLIED</strong></span
+            >
           </p>
           <hr />
         </div>
@@ -50,7 +52,9 @@
           <h1>500</h1>
           <p class="break"></p>
           <p>
-            <span style="color: rgb(47,215,94);"><strong>ACCEPTED</strong></span>
+            <span style="color: rgb(47, 215, 94)"
+              ><strong>ACCEPTED</strong></span
+            >
           </p>
           <hr />
         </div>
@@ -59,7 +63,9 @@
           <h1>150</h1>
           <p class="break"></p>
           <p>
-            <span style="color: rgb(234,238,31);"><strong>PENDING</strong></span>
+            <span style="color: rgb(234, 238, 31)"
+              ><strong>PENDING</strong></span
+            >
           </p>
           <hr />
         </div>
@@ -68,7 +74,9 @@
           <h1>350</h1>
           <p class="break"></p>
           <p>
-            <span style="color: rgb(231,66,66);"><strong>REJECTED</strong></span>
+            <span style="color: rgb(231, 66, 66)"
+              ><strong>REJECTED</strong></span
+            >
           </p>
           <hr />
         </div>
@@ -76,7 +84,9 @@
       <div class="applicant_list_section">
         <div class="dynamic_controls">
           <div>
-            <button type="button" id="add_user_btn"><img src="src/media/img add.png" alt="add icon" /></button>
+            <button type="button" id="add_user_btn">
+              <img src="src/media/img add.png" alt="add icon" />
+            </button>
             <button type="button" id="filter_user_btn">
               <img src="src/media/img filter.png" alt="filter icon" />
             </button>
@@ -105,7 +115,7 @@
                 <th>COMM SCORE</th>
                 <th>INTERVIEW SCORE</th>
                 <th>STATUS</th>
-                <th>VERDICT</th>
+                <th>FINAL VERDICT</th>
                 <th>TIME STAMP</th>
               </tr>
             </thead>
@@ -114,12 +124,97 @@
                -->
             </tbody>
           </table>
-          
         </div>
       </div>
-      <footer>
-
-      </footer>
+      <div id="backdrop"></div>
+      <div id="add_user_section">
+        <div id="add_user_content" class="grid-container">
+          <label for="username_input" class="itemlb1">Name:</label>
+          <input
+            type="text"
+            id="username_input"
+            name="username"
+            class="item1"
+          />
+          <p class="itemlb2">Qrate Score:</p>
+          <div
+            class="item2"
+            style="display: flex; justify-content: space-around"
+          >
+            <div>
+              <input
+                type="radio"
+                id="recommended_input"
+                name="qrate score"
+                value="RECOMMENDED"
+                checked
+              />
+              <label for="recommended_input">Recommended</label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                id="pending_input"
+                name="qrate score"
+                value="PENDING"
+              />
+              <label for="pending_input">Pending</label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                id="rejected_input"
+                name="qrate score"
+                value="REJECTED"
+              />
+              <label for="rejected_input">Rejected</label>
+            </div>
+          </div>
+          <p class="itemlb3">Profile score:</p>
+          <div class="item3"></div>
+          <label for="quiz_score_input" class="itemlb4">Quiz Score:</label>
+          <input type="number" id="quiz_score_input" class="item4" value="0" />
+          <label for="comm_score_input" class="itemlb5">Comm Score:</label>
+          <input type="number" id="comm_score_input" class="item5" value="0" />
+          <label for="interview_score_input" class="itemlb6"
+            >Interview Score:</label
+          >
+          <input
+            type="number"
+            id="interview_score_input"
+            step="1"
+            max="100"
+            min="0"
+            class="item6"
+            value="0"
+          />
+          <label for="status_input" class="itemlb7">Status:</label>
+          <select name="status" id="status_input" class="item7">
+            <option value="Pending">Pending</option>
+            <option value="Selected">Selected</option>
+          </select>
+          <label for="final_verdict_input" class="itemlb8"
+            >Final Verdict:</label
+          >
+          <select name="final verdict" id="final_verdict_input" class="item8">
+            <option value="Pending">Pending</option>
+            <option value="Accepted">Accepted</option>
+            <option value="Rejected">Rejected</option>
+          </select>
+          <label for="time_stamp_input" class="itemlb9">Time Stamp:</label>
+          <input
+            type="time"
+            name="time stamp"
+            id="time_stamp_input"
+            class="item9"
+          />
+        </div>
+        <div id="add_user_actions">
+          <button class="cancel_btn">Cancel</button>
+          <button>Add Applicant</button>
+        </div>
+      </div>
+      <footer></footer>
     </main>
   </body>
 </html>

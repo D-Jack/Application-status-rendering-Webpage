@@ -236,6 +236,143 @@ header div img {
   background: rgb(117, 117, 117);
 }
 
+#backdrop {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.75);
+  z-index: 10;
+  pointer-events: none;
+  display: none;
+}
+
+#backdrop.visible {
+  display: block;
+  pointer-events: all;
+}
+
+#add_user_section {
+  display: none;
+  position: fixed;
+  background-color: white;
+  width: 35rem;
+  font-family: sans-serif;
+  left: calc(50% - 17.5rem);
+  top: 20%;
+  border-radius: 0.8rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  z-index: 20;
+  overflow: hidden;
+}
+#add_user_section p {
+  margin: 0;
+}
+#add_user_section.visible {
+  display: block;
+}
+#add_user_content {
+  padding: 1rem;
+}
+.item1 {
+  grid-area: item1;
+}
+.item2 {
+  grid-area: item2;
+}
+.item3 {
+  grid-area: item3;
+}
+.item4 {
+  grid-area: item4;
+}
+.item5 {
+  grid-area: item5;
+}
+.item6 {
+  grid-area: item6;
+}
+.item7 {
+  grid-area: item7;
+}
+.item8 {
+  grid-area: item8;
+}
+.item9 {
+  grid-area: item9;
+}
+.itemlb1 {
+  grid-area: itemlb1;
+}
+.itemlb2 {
+  grid-area: itemlb2;
+}
+.itemlb3 {
+  grid-area: itemlb3;
+}
+.itemlb4 {
+  grid-area: itemlb4;
+}
+.itemlb5 {
+  grid-area: itemlb5;
+}
+.itemlb6 {
+  grid-area: itemlb6;
+}
+.itemlb7 {
+  grid-area: itemlb7;
+}
+.itemlb8 {
+  grid-area: itemlb8;
+}
+.itemlb9 {
+  grid-area: itemlb9;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    "itemlb1 itemlb1 item1 item1 item1 item1"
+    "itemlb2 itemlb2 item2 item2 item2 item2"
+    "itemlb3 itemlb3 item3 item3 item3 item3"
+    "itemlb4 itemlb4 itemlb5 itemlb5 itemlb6 itemlb6"
+    "item4 item4 item5 item5 item6 item6"
+    "itemlb7 itemlb7 item7 item7 item7 item7"
+    "itemlb8 itemlb8 item8 item8 item8 item8"
+    "itemlb9 itemlb9 item9 item9 item9 item9";
+  grid-gap: 0.2rem;
+}
+#add_user_actions {
+  display: flex;
+  justify-content: flex-end;
+  padding: 1rem;
+}
+
+#add_user_actions button {
+  font-family: sans-serif;
+  padding: 0.5rem 1.5rem;
+  border: 1px solid rgb(237,234,234);
+  background: rgb(237,234,234);
+  color: black;
+  border-radius: 6px;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.26);
+  cursor: pointer;
+  margin: 0 0.5rem;
+}
+
+#add_user_actions button:hover,
+#add_user_actions button:active {
+  background: rgb(96,171,240);
+  border-color: rgb(96,171,240);
+}
+#add_user_actions .cancel_btn:active,
+#add_user_actions .cancel_btn:hover{
+  background:rgb(231,66,66);
+  border-color: rgb(231,66,66);
+}
+
+
 @media screen and (max-width: 950px) {
   .application_status div h1 {
     font-size: 2rem;
@@ -294,6 +431,37 @@ header div img {
     margin: 0 0.5rem;
   }
 }
+@media screen and (max-width: 620px) {
+  #add_user_section {
+    
+    width: 25rem;
+    top: 20%;
+    left:calc(50% - 12.5rem);
+    
+  }
+  .item2{
+    flex-direction: column;
+  }
+  .grid-container {
+    grid-template-areas:
+      "itemlb1 itemlb1 item1 item1 item1 item1"
+      "itemlb2 itemlb2 item2 item2 item2 item2"
+      "itemlb3 itemlb3 item3 item3 item3 item3"
+      "itemlb4 itemlb4 item4 item4 item4 item4"
+      "itemlb5 itemlb5 item5 item5 item5 item5"
+      "itemlb6 itemlb6 item6 item6 item6 item6"
+      "itemlb7 itemlb7 item7 item7 item7 item7"
+      "itemlb8 itemlb8 item8 item8 item8 item8"
+      "itemlb9 itemlb9 item9 item9 item9 item9";
+  }
+  #add_user_actions {
+    justify-content: space-between;
+  }
+  #add_user_actions button{
+    flex:1;
+  }
+
+}
 @media screen and (max-width: 510px) {
   .application_status {
     flex-direction: column;
@@ -331,22 +499,44 @@ header div img {
   .dynamic_controls div:last-child {
     margin: 0.5rem 1rem;
   }
-  header{
-    height:auto;
-    flex-wrap:wrap;
+  header {
+    height: auto;
+    flex-wrap: wrap;
   }
-  header div{
-    flex:1;
+  header div {
+    flex: 1;
     flex-basis: 50%;
     text-align: center;
   }
-  header div:nth-child(2){
-    flex:1;
+  header div:nth-child(2) {
+    flex: 1;
     flex-basis: 50%;
   }
-  .header_right{
-    flex-basis:100%;
-    padding-top: .4rem;
+  .header_right {
+    flex-basis: 100%;
+    padding-top: 0.4rem;
   }
 }
-
+@media screen and (max-width:420px)
+{
+  #add_user_section {
+    
+    width: 95%;
+    top: 17%;
+    left:2.5%;
+    
+  }
+  .grid-container {
+    grid-template-columns: 1.2fr 1.2fr 1fr 1fr 1fr;
+    grid-template-areas:
+      "itemlb1 itemlb1 item1 item1 item1"
+      "itemlb2 itemlb2 item2 item2 item2"
+      "itemlb3 itemlb3 item3 item3 item3"
+      "itemlb4 itemlb4 item4 item4 item4"
+      "itemlb5 itemlb5 item5 item5 item5"
+      "itemlb6 itemlb6 item6 item6 item6"
+      "itemlb7 itemlb7 item7 item7 item7"
+      "itemlb8 itemlb8 item8 item8 item8"
+      "itemlb9 itemlb9 item9 item9 item9";
+  }
+}
