@@ -1,6 +1,10 @@
-const setUserData = (userData) => {
+const applicantList = [];
+
+
+
+const setUserData = (user) => {
   const userTableBody = document.getElementById("user_table_body");
-  for (const user of userData) {
+  
     const tableRow = document.createElement('tr');
     let qrateClass;
     if (user["QRATE SCORE"] === "RECOMMENDED") {
@@ -20,11 +24,11 @@ const setUserData = (userData) => {
     <td>${user["COMM SCORE"]}</td>
     <td>${user["INTERVIEW SCORE"]}</td>
     <td>${user.STATUS}</td>
-    <td>${user.VERDICT}</td>
+    <td>${user["FINAL VERDICT"]}</td>
     <td>${user["TIME STAMP"]}</td>
     `;
     userTableBody.appendChild(tableRow);
-  }
+  
 }
 const fetchdata = () => {
     fetch("src\\js\\MOCK_DATA _10row.json")
@@ -35,8 +39,12 @@ const fetchdata = () => {
         return Response.json();
       })
       .then((userData) => {
-        setUserData(userData);
-        console.log(userData);
+        for (const user of userData) {
+          setUserData(user);
+        }
+        applicantList.push(...userData);
+
+        console.log(applicantList);
       });
 }
 fetchdata();
