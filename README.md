@@ -4,7 +4,7 @@
 <a href="#applied-media-queries">Media queries</a>,
 <a href="#getting-the-table-data-from-json">User data</a>,
 <a href="#javaScript-functionality-to-add-new-applicant">Js functionality to add a new Applicant data </a>
-
+<p>It is recommended to open the project in live server so there will be no problem regarding source of fetch data.(looking for alternative ) </p>
 <div>
 	<h1>About this Project</h1>
 	<p>In this project I have designed the UI interface with scratch with HTML, CSS and little bit bootstrap with media queries included .I have made a user data adding functionality through js</p>

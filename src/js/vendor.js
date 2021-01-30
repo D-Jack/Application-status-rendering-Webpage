@@ -31,7 +31,7 @@ const setUserData = (user) => {
   
 }
 const fetchdata = () => {
-    fetch("src\\js\\MOCK_DATA _10row.json")
+    fetch("src/js/MOCK_DATA_10row.json")
     .then((Response) => {
         if (!Response.ok) {
           throw Error("ERROR");
