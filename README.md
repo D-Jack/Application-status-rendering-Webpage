@@ -1,4 +1,4 @@
-# Apllication-status-redering-Webpage
+# Apllication-status-rendering-Webpage
 <header>Content</header>
 <a href="#about-this-project">About this project</a>
 <a href="#applied-media-queries">Media queries</a>,
@@ -7,7 +7,7 @@
 <p>It is recommended to open the project in live server so there will be no problem regarding source of fetch data.(looking for alternative ) </p>
 <div>
 	<h1>About this Project</h1>
-	<p>In this project I have designed the UI interface with scratch with HTML, CSS and little bit bootstrap with media queries included .I have made a user data adding functionality through js</p>
+	<p>In this project I have designed the UI interface with scratch with HTML, CSS and little bit bootstrap with media queries included .I have made a user data adding functionality through js and (search functionality is on progress)</p>
 	<h1>Applied Media queries</h1>
 	<p>I have applied dynamic media queries with respected to user display size </p>
 	<div style="display: flex;">
