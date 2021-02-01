@@ -1,4 +1,4 @@
-# Apllication-status-rendering-Webpage
+# Application-status-rendering-Webpage
 <header>Content</header>
 <a href="#about-this-project">About this project</a>
 <a href="#applied-media-queries">Media queries</a>,
